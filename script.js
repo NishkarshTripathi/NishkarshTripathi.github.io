@@ -11,8 +11,8 @@ findRouteButton.addEventListener('click', () => {
                 const userLng = position.coords.longitude;
 
                 // Replace with your desired destination coordinates
-                const destinationLat = 28.6139; 
-                const destinationLng = 77.2090; 
+                const destinationLat = 28.749964; 
+                const destinationLng = 77.529547; 
 
                 // Construct the Google Maps URL
                 const googleMapsUrl = 'https://maps.google.com/maps?saddr=${userLat},${userLng}&daddr=${destinationLat},${destinationLng}'; 
