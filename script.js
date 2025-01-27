@@ -12,7 +12,7 @@ findRouteButton.addEventListener('click', () => {
                 const destinationLng = 77.529196; 
 
                 // Construct the Google Maps URL
-                const googleMapsUrl = https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLng}&destination=${destinationLat},${destinationLng};
+                const googleMapsUrl = 'https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLng}&destination=${destinationLat},${destinationLng}';
 
                 // Redirect to the Google Maps URL
                 window.location.href = googleMapsUrl;
