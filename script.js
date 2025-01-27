@@ -1,24 +1,27 @@
 const findRouteButton = document.getElementById('findRoute');
 
 findRouteButton.addEventListener('click', () => {
+    console.log("Button clicked"); 
+
     if ("geolocation" in navigator) {
         navigator.geolocation.getCurrentPosition(
             (position) => {
+                console.log("Location obtained");
                 const userLat = position.coords.latitude;
                 const userLng = position.coords.longitude;
 
                 // Replace with your desired destination coordinates
-                const destinationLat = 28.749571; 
-                const destinationLng = 77.529196; 
+                const destinationLat = 28.6139; 
+                const destinationLng = 77.2090; 
 
                 // Construct the Google Maps URL
-                const googleMapsUrl = 'https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLng}&destination=${destinationLat},${destinationLng}';
+                const googleMapsUrl = 'https://maps.google.com/maps?saddr=${userLat},${userLng}&daddr=${destinationLat},${destinationLng}'; 
 
                 // Redirect to the Google Maps URL
-                window.location.href = googleMapsUrl;
+                window.location.href = googleMapsUrl; 
             },
             (error) => {
-                alert("Error getting location: " + error.message);
+                console.error("Error getting location:", error.message);
             }
         );
     } else {
